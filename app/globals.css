@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.middle {
+  @apply mx-auto w-full max-w-[1400px];
+}
+
+html,
+body {
+  -webkit-text-size-adjust: none;
+  scroll-behavior: smooth !important;
+  overscroll-behavior: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.red-text-shadow {
+  position: relative;
+}
+
+.red-text-shadow::after {
+  content: "GAMING EXPERIENCE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #f00;
+  width: 100%;
+  height: 100%;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.horizontal-flip {
+  transform: scaleX(-1);
+}
+.red-logo-shadow {
+  filter: drop-shadow(0 0 50px #f00);
+}
+
+.article-coursel {
+  display: flex;
+  width: 200%;
+  animation: bannermove 20s linear infinite;
+}
+
+.coursel-track {
+  width: 100%;
+}
+
+.coursel-ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+img,
+button {
+  user-select: none;
+}
+
+.parallogram,
+.parallogram2 {
+  transform: skew(-50deg);
+}
+
+.gradient-thing {
+  background: linear-gradient(
+    -6deg,
+    #0a0a0a 0%,
+    #0a0a0a 50%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+@font-face {
+  font-family: "ForniteFont";
+  src: url("/Fornite.otf");
+}
+
+.ForniteFont {
+  font-family: "ForniteFont";
+}
+
+body {
+  pointer-events: visible !important;
+}
